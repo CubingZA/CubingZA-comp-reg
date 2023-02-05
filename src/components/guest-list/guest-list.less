@@ -1,0 +1,59 @@
+.guest-list {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .status-column {
+    text-align: center;
+  }
+
+  table th {    
+    color: #fff;
+  }
+
+  table td, table th {
+    padding: 0.5em 1.5em;    
+    border: 1px solid #ccc;
+  }
+
+  table td {
+    font-size: 0.8em;
+  }
+
+  .status-tag {
+    display: inline-block;
+    text-align: center;
+    padding: .4em .6em;
+    font-size: 70%;
+    font-weight: 700;
+    background-color: #5cb85c;
+    color: #fff;
+    border-radius: 0.5em;
+    margin: 0 0.3em;
+  }
+
+  .pending th {
+    background-color: #007bff;
+  }
+  .awaiting th {
+    background-color: #dc3545;
+  }
+  .unregistered th {
+    background-color: #ffc107;
+  }
+  .accepted-not-paid th {
+    background-color: #17a2b8;
+  }
+  .accepted-paid th {
+    background-color: #5cb85c;
+  }
+  .deleted th {
+    background-color: #6c757d;
+  }
+
+}
