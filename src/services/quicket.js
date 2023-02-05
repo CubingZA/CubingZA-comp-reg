@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export function getToken() {
   return {
-    api_key: localStorage.getItem('quicket_api_key'),
+    api_key: process.env.REACT_APP_QUICKET_API_KEY,
     token: localStorage.getItem('quicket_api_token'),
   }
 }
