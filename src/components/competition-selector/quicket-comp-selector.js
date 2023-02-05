@@ -41,7 +41,7 @@ export default function QuicketCompSelector({comps, setComps, clearData}) {
     clearData();
   }
 
-  return <div>
+  return <div className='comp-selector-container'>
     <div>{err ? 
       <span className='comp-selector-error'><strong>Error:</strong> {err} </span>
     : 

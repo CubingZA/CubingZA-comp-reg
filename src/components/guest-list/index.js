@@ -35,8 +35,8 @@ export default function GuestList({quicketEvent, wcaComp, stateContainer}) {
 
   return <div>
 
-    {tickets.length ? null : <div>No tickets were found.</div>}
-    {registrations.length ? null : <div>No competitor registrations were found.</div>}
+    {tickets.length ? null : <div>Loading tickets...</div>}
+    {registrations.length ? null : <div>Loading registration...</div>}
 
     {tickets.length && registrations.length ? 
     <RegistrationTables tickets={tickets} registrations={registrations}/>
