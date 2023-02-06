@@ -8,7 +8,7 @@ export function getCompetitions() {
   const token = getToken();
   if (!token) {return Promise.resolve()}
 
-  const numDaysBack = 14;
+  const numDaysBack = 2;
 
   const urlBase = process.env.REACT_APP_WCA_URL;
   const endpoint = "/api/v0/competitions";
