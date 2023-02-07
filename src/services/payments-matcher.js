@@ -99,7 +99,8 @@ function markPaid(reg, ticket) {
 }
 
 function isMatch(left, right) {
-  return left && right && left.length && right.length && left === right;
+  return left && right && left.length && right.length && 
+    left.toLowerCase() === right.toLowerCase();
 }
 
 function ticketToReg(ticket) {
