@@ -14,8 +14,6 @@ export default function App() {
 
   const isLoggedIn = (getWcaToken() && getQuicketToken().token) ? true : false;
 
-  console.log(getQuicketToken());
-
   const [wcaComps, setWcaComps] = useState({selected: {id: null, name: ""}, list: []});
   const [quicketEvents, setQuicketEvents] = useState({selected: {id: null, name: ""}, list: []});
 
