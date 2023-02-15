@@ -60,8 +60,13 @@ export default function App() {
           }
           <GuestList quicketEvent={quicketEvents.selected} wcaComp={wcaComps.selected} stateContainer={stateContainer} />
         </div>
+        
       </>
     }
+
+    <div className='footer'>
+      <a href="https://github.com/AlphaSheep/CubingZA-comp-reg" target="_blank">GitHub</a>
+    </div>
   </>
  
 }
