@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { getGuestList } from '../../services/quicket';
 import { getRegistrations } from '../../services/wca';
 import { matchRegistrationsToPayments } from '../../services/payments-matcher';
-import { WcaLogo } from '../logos';
+import EventLinks from '../event-link';
 
 import './guest-list.less';
 
@@ -39,11 +39,7 @@ export default function GuestList({quicketEvent, wcaComp, stateContainer}) {
     {tickets.length ? null : <div>Loading tickets...</div>}
     {registrations.length ? null : <div>Loading registration...</div>}
 
-    <div>
-      <a href={getRegistrationURL(wcaComp.id)} target='_blank'>
-        <WcaLogo/>
-      </a>
-    </div>
+    <EventLinks wcaComp={wcaComp} quicketEvent={quicketEvent}/>
 
     {tickets.length && registrations.length ? 
     <RegistrationTables tickets={tickets} registrations={registrations}/>
@@ -99,9 +95,4 @@ function StatusTags({data}) {
     {data.organizer ? <span className='status-tag'>Organiser</span> : null}
     {data.delegate ? <span className='status-tag'>Delegate</span> : null}
   </>
-}
-
-function getRegistrationURL(id) {
-  const base = process.env.REACT_APP_WCA_URL;
-  return `${base}/competitions/${id}/edit/registrations`;
 }
