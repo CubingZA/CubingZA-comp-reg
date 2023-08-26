@@ -35,7 +35,7 @@ export default function App() {
   return <>
     <div className='banner'>
       <h1>
-        <img className='logo' src="https://cubingza.org/assets/images/logo_web-4d86d0f10f.svg" />
+        <img className='logo' src="https://cubingza.org/assets/images/logo_web.svg" />
         <span>Comp Registration Admin</span>
       </h1>
 
